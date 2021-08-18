@@ -1,0 +1,54 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.inputs
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 10vw;
+	padding: 20px 3vw;
+	box-shadow: 0 2px 5px 1px Black;
+}
+
+.inputs > label,input
+{
+	flex: 1 1 50%;
+	margin: 0 0 10px 0;
+}
+.inputs > input
+{
+	outline: none;
+	border:  1px solid #434456;
+	border-radius: 3px;
+	padding: 3px;
+
+}
+.inputs > button
+{
+	flex: 1 1 100%;
+	margin: 0 0 10px 0;
+	outline: none;
+	border:  1px solid #434456;
+	border-radius: 3px;
+	padding: 3px;
+	background: linear-gradient(45deg ,lime, green);
+	color:  #black;
+	font-weight: 555;
+	font-size: 1.5em;
+}
+#output
+{
+	display: flex;
+	margin: 5vw 10vw;
+	padding: 5vw;
+	box-shadow: 0 2px 5px 1px Black;
+}
+#output > sup
+{
+	line-height: 1ch;
+}
