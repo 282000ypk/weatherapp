@@ -8,18 +8,21 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body>
-	<form onsubmit="{return false}">
-	<div class="inputs">
-		
-		<label>City</label><input type="text" name="city" id="city" required="" placeholder="eg:PUNE"><br>
-		<label>Country</label><input type="text" name="country" id="country" required="" placeholder="eg:IND"><br>
-		<button onclick="update()">Show</button>
-		
+	<div class="container">
+		<form onsubmit="{return false}">
+		<div class="inputs">	
+			<label>City</label><input type="text" name="city" id="city" required="" placeholder="eg:PUNE">
+			<label>Country</label><input type="text" name="country" id="country"  placeholder="eg:IND">
+			<button onclick="update()">Show</button>	
+		</div>
+		</form>
+		<div class="output">
+			test
+		</div>
 	</div>
-	</form>
-	<div id="output">
-		
+	<div class="loading">
+		<div class="rotate"></div>
 	</div>
-
+	
 </body>
 </html>
