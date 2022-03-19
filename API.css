@@ -28,9 +28,9 @@
 	align-content: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	box-shadow: 0 2px 5px 1px Black;
+	margin: 10px 0px;
+	box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.3);
 	padding: 20px;
-	background: #FCCF3A;
 }
 .inputs
 {
@@ -41,7 +41,7 @@
 {
 	padding: 0px 20px 0px 0px;
 	font-weight: 333;
-	font-size: 1.2em;
+	font-size: 1em;
 	
 	display: flex;
 	align-items: center;
@@ -49,19 +49,14 @@
 }
 .inputs > input
 {
-	flex: 1 1 300px;
-	padding: 0 0 10px 0;
+	flex: 1 1 200px;
 	font-weight: 555;
 	margin: 5px 10px;
-	font-size: 1.5em;
-}
-.inputs > input
-{
 	outline: none;
 	border:  1px solid #434456;
 	border-radius: 3px;
 	padding: 15px 10px;
-
+	display: flex;
 }
 .inputs > button
 {
@@ -71,7 +66,7 @@
 	border:  1px solid #434456;
 	border-radius: 3px;
 	padding: 15px 30px;
-	background: #EA5A6F;
+	background: #FCCF3A;
 	color:  black;
 	font-size: 1.5em;
 }
@@ -165,6 +160,10 @@
 	{
 		padding: 20px 10vw;
 	}
+	.inputs > input
+	{
+		font-size: 1.2em;
+	}
 }
 
 @media(min-width: 1000px)
@@ -173,4 +172,5 @@
 	{
 		padding: 20px 20vw;
 	}
+
 }
