@@ -11,46 +11,66 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
-	align-items: center;
-	flex-direction: column;
-	padding: 10vw;
-	background: linear-gradient(45deg, #EA5A6F, #DE791E, #FCCF3A);
+	align-content: center;
+	flex-wrap: wrap;
+	padding: 20px;
+}
+.container > form
+{
+	display: flex;
+	flex: 1 1 100%;
+	
 }
 .inputs, .output
 {
-	width: 80vw;
-	height: 30vh;
+	flex: 1 1 100%;
 	display: flex;
-	align-items: center;
+	align-content: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	box-shadow: 0 2px 5px 1px Black;
 	padding: 20px;
-	margin: 20px;
 	background: #FCCF3A;
 }
-
-.inputs > label,input
+.inputs
 {
-	flex: 1 1 50%;
+	justify-content: flex-start;
+}
+
+.inputs > label
+{
+	padding: 0px 20px 0px 0px;
+	font-weight: 333;
+	font-size: 1.2em;
+	
+	display: flex;
+	align-items: center;
+	margin: 5px 10px;
+}
+.inputs > input
+{
+	flex: 1 1 300px;
 	padding: 0 0 10px 0;
 	font-weight: 555;
+	margin: 5px 10px;
+	font-size: 1.5em;
 }
 .inputs > input
 {
 	outline: none;
 	border:  1px solid #434456;
 	border-radius: 3px;
-	padding: 3px;
+	padding: 15px 10px;
 
 }
 .inputs > button
 {
-	flex: 1 1 100%;
+	flex: 0 1 200px;
+	margin: 5px 10px;
 	outline: none;
 	border:  1px solid #434456;
 	border-radius: 3px;
-	padding: 3px;
+	padding: 15px 30px;
 	background: #EA5A6F;
 	color:  black;
 	font-size: 1.5em;
@@ -60,12 +80,14 @@
 {
 	font-size: 2em;
 	font-weight: 999;
-	
+	min-height: 50vh;
 }
-.output > sup
+.image
 {
-	line-height: 1ch;
+	height: 100px;
+	width: 100px;
 }
+
 .loading
 {
 	position: fixed;
@@ -77,19 +99,19 @@
 	height: 100vh;
 	width: 100%;
 	z-index: 999;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.3);
 }
 .rotate
 {
 	display: block;
-	height: 200px;	
-	width: 200px;
+	height: 100px;	
+	width: 100px;
 	border-radius: 50%;
-	border-left: 20px solid;
-	border-bottom: 	20px solid rgba(0, 0, 0, 0.2);
-	border-top: 20px solid rgba(0, 0, 0, 0.2);
-	border-right: 20px solid rgba(0, 0, 0, 0.2);
-	animation: rotate-infinite 2s linear infinite;
+	border-left: 10px solid;
+	border-bottom: 	10px solid rgba(0, 0, 0, 0.2);
+	border-top: 10px solid rgba(0, 0, 0, 0.2);
+	border-right: 10px solid;
+	animation: rotate-infinite 1s linear infinite;
 }
 
 @keyframes rotate-infinite {
@@ -102,4 +124,53 @@
 		transform: rotate(360deg);
 	}
 	
+}
+#result_success
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	
+}
+@keyframes fadein
+{
+	0%
+	{
+		opacity: 0;
+	}
+	100%
+	{
+		opacity: 1;
+	}
+}
+#result_success > p
+{
+	text-align: center;
+	flex: 1 1 100%;
+}
+.hidden
+{
+	display: none;
+}
+.visible
+{
+	display: flex;
+	animation: fadein 1s ease;
+}
+
+@media(min-width: 500px)
+{
+	.container
+	{
+		padding: 20px 10vw;
+	}
+}
+
+@media(min-width: 1000px)
+{
+	.container
+	{
+		padding: 20px 20vw;
+	}
 }

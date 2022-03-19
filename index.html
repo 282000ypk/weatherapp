@@ -11,15 +11,27 @@
 	<div class="container">
 		<form onsubmit="{return false}">
 		<div class="inputs">	
-			<label>City</label><input type="text" name="city" id="city" required="" placeholder="eg:PUNE">
-			<label>Country</label><input type="text" name="country" id="country"  placeholder="eg:IND">
+			<label for="city">City</label>
+			<input type="text" name="city" id="city" required="" placeholder="eg:PUNE">
 			<button onclick="update()">Show</button>	
 		</div>
 		</form>
 		<div class="output">
-			Temperature: 
+
+			<div class="visible" id="result_success">
+				<p id="city_output">Pune</p>
+				<img src="https://www.weatherbit.io/static/img/icons/a02n.png" class="image">
+				<p id="temperature">26.4<sup>o</sup>C</p>
+				<p id="description">Smoke</p>
+			</div>
+
+			<div id="result_failure" class="hidden">
+				<p>Please enter a valid city or country name</p>
+			</div>
+			
 		</div>
 	</div>
+	
 	<div class="loading">
 		<div class="rotate"></div>
 	</div>
